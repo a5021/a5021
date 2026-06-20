@@ -51,9 +51,7 @@ Here are the key repositories that reflect my engineering approach and code qual
 
 This dynamic card updates automatically and analyzes the codebase across all my public repositories:
 
-<p align="left">
-  <img src="https://vercel.app" alt="Top Languages" />
-</p>
+[![a5021's GitHub stats](https://github-readme-stats.vercel.app/api?username=a5021&show_icons=true&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
 
 ---
 
