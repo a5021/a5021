@@ -41,14 +41,14 @@ Here are the key repositories that reflect my engineering approach and code qual
 - **Key Feature:** Implements direct radio communication on Nordic chips with a strong focus on low-power optimization and standalone efficiency.
 - **Stack:** C, nRF52832, BME280.
 
-### 4. [Wireless Sensor → Repeater → Receiver Chain](https://github.com/a5021/STM32F030F4P6-WIRELESS-MULTISENSOR)
+### 4. [BluePill Project Generator](https://github.com/a5021/BluePill_Project_Generator)
+- **Overview:** A shell script for instantaneous scaffolding of a clean, CMSIS-ready project structure for BluePill boards, bypassing bulky IDE project wizards.
+- **Stack:** Bash / Shell.
+
+### 5. [Wireless Sensor → Repeater → Receiver Chain](https://github.com/a5021/STM32F030F4P6-WIRELESS-MULTISENSOR)
 - **Overview:** A complete three-link wireless telemetry system spanning three MCU architectures. An STM32F030F4P6 multisensor node (BMP180, Si7021, BH1750) transmits environmental data over nRF24L01+ to an ATmega8 repeater, which controls a load relay and retransmits the datagram across multiple channels. An STM8S003F3 receiver decodes the relayed data and sends it over UART to an OpenWrt-based router, which forwards the telemetry to the internet via a set of scripts.
 - **Key Feature:** Demonstrates cross-architecture interoperability (ARM Cortex-M0, AVR, STM8) with a shared radio protocol, bare-metal drivers, and relay-based automation, with end-to-end telemetry delivery to an internet-connected endpoint.
 - **Stack:** C, STM32F030F4P6, ATmega8, STM8S003F3, nRF24L01+.
-
-### 5. [BluePill Project Generator](https://github.com/a5021/BluePill_Project_Generator)
-- **Overview:** A shell script for instantaneous scaffolding of a clean, CMSIS-ready project structure for BluePill boards, bypassing bulky IDE project wizards.
-- **Stack:** Bash / Shell.
 
 ---
 
