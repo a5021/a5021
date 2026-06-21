@@ -31,23 +31,7 @@ Here are the key repositories that reflect my engineering approach and code qual
 - **Key Feature:** Eliminates blocking hardware delays entirely, resulting in minimal CPU overhead and making it safe for time-critical, multi-tasking systems.
 - **Stack:** C, STM32, Reference Manual Registers.
 
-### 2. [Wireless Sensor → Repeater → Receiver Chain](https://github.com/a5021/STM32F030F4P6-WIRELESS-MULTISENSOR)
-- **Overview:** A complete three-link wireless telemetry system spanning three MCU architectures. An STM32F030F4P6 multisensor node (BMP180, Si7021, BH1750) transmits environmental data over nRF24L01+ to an ATmega8 repeater, which controls a load relay and retransmits the datagram across multiple channels. An STM8S003F3 receiver decodes the relayed data and sends it over UART to an OpenWrt-based router, which forwards the telemetry to the internet via a set of scripts.
-- **Key Feature:** Demonstrates cross-architecture interoperability (ARM Cortex-M0, AVR, STM8) with a shared radio protocol, bare-metal drivers, and relay-based automation, with end-to-end telemetry delivery to an internet-connected endpoint.
-- **Stack:** C, STM32F030F4P6, ATmega8, STM8S003F3, nRF24L01+.
-
----
-
-### 3. [nRF52832 + BME280 Wireless Sensor Node](https://github.com/a5021/NRF52832-BME280-RADIO)
-- **Overview:** Firmware for a wireless environmental sensor node measuring pressure, humidity, and temperature.
-- **Key Feature:** Implements direct radio communication on Nordic chips with a strong focus on low-power optimization and standalone efficiency.
-- **Stack:** C, nRF52832, BME280.
-
-### 4. [BluePill Project Generator](https://github.com/a5021/BluePill_Project_Generator)
-- **Overview:** A shell script for instantaneous scaffolding of a clean, CMSIS-ready project structure for BluePill boards, bypassing bulky IDE project wizards.
-- **Stack:** Bash / Shell.
-
-### 5. [stm32codegen — Initialization Code Generator](https://github.com/a5021/BluePill_Project_Generator)
+### 2. [stm32codegen — Initialization Code Generator](https://github.com/a5021/BluePill_Project_Generator)
 - **Overview:** A Python-based CLI tool designed to automatically generate CMSIS-compliant peripheral initialization templates for STM32 MCUs.
 - **Key Feature:** Serving as a lightweight alternative to heavy IDE tools (like STM32CubeMX) for developers who prefer clean, bloat-free bare-metal code.
 - **Stack:** Python, CMSIS, Bare-metal workflow.
@@ -64,3 +48,19 @@ This dynamic card updates automatically and analyzes the codebase across all my 
 
 - **Telegram:** [@a5021](https://t.me)
 - **Explore More:** Feel free to check out the [Repositories](https://github.com) tab for other low-level projects (including multi-sensor setups on STM32F030 + nRF24L01).
+
+### 3. [nRF52832 + BME280 Wireless Sensor Node](https://github.com/a5021/NRF52832-BME280-RADIO)
+- **Overview:** Firmware for a wireless environmental sensor node measuring pressure, humidity, and temperature.
+- **Key Feature:** Implements direct radio communication on Nordic chips with a strong focus on low-power optimization and standalone efficiency.
+- **Stack:** C, nRF52832, BME280.
+
+### 4. [BluePill Project Generator](https://github.com/a5021/BluePill_Project_Generator)
+- **Overview:** A shell script for instantaneous scaffolding of a clean, CMSIS-ready project structure for BluePill boards, bypassing bulky IDE project wizards.
+- **Stack:** Bash / Shell.
+
+### 5. [Wireless Sensor → Repeater → Receiver Chain](https://github.com/a5021/STM32F030F4P6-WIRELESS-MULTISENSOR)
+- **Overview:** A complete three-link wireless telemetry system spanning three MCU architectures. An STM32F030F4P6 multisensor node (BMP180, Si7021, BH1750) transmits environmental data over nRF24L01+ to an ATmega8 repeater, which controls a load relay and retransmits the datagram across multiple channels. An STM8S003F3 receiver decodes the relayed data and sends it over UART to an OpenWrt-based router, which forwards the telemetry to the internet via a set of scripts.
+- **Key Feature:** Demonstrates cross-architecture interoperability (ARM Cortex-M0, AVR, STM8) with a shared radio protocol, bare-metal drivers, and relay-based automation, with end-to-end telemetry delivery to an internet-connected endpoint.
+- **Stack:** C, STM32F030F4P6, ATmega8, STM8S003F3, nRF24L01+.
+
+---
