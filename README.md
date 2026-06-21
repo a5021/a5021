@@ -25,7 +25,7 @@ I specialize in low-level, register-level development (**Bare Metal**) and firmw
 
 ## Featured Projects
 
-Here are the key repositories that reflect my engineering approach and code quality. The three-link sensor→repeater→receiver chain in project #2 below demonstrates cross-architecture interoperability across ARM Cortex-M0, AVR, and STM8 in a single end-to-end wireless telemetry system.
+Here are the key repositories that reflect my engineering approach and code quality:
 
 ### 1. [Non-Blocking DS18B20 Register-Level Driver](https://github.com/a5021/non-blocking-ds18B20-driver-for-stm32f103c8t6)
 - **Overview:** An asynchronous, non-blocking driver for the DS18B20 thermometer on STM32F103, built strictly at the register level.
