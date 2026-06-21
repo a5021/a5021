@@ -58,9 +58,3 @@ This dynamic card updates automatically and analyzes the codebase across all my 
 
 [![a5021's GitHub stats](https://github-readme-stats.vercel.app/api?username=a5021&show_icons=true&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
 
----
-
-## Connect with Me
-
-- **Telegram:** [@a5021](https://t.me)
-- **Explore More:** Feel free to check out the [Repositories](https://github.com) tab for other low-level projects (including multi-sensor setups on STM32F030 + nRF24L01).
