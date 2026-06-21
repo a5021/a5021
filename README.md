@@ -7,7 +7,7 @@ I specialize in low-level, register-level development (**Bare Metal**) and firmw
 ## Technical Stack
 
 ### Microcontrollers (MCUs)
-- **STMicroelectronics:** STM32F103 (Blue Pill), STM32F030, STM8S003F3
+- **STMicroelectronics:** STM32 and STM8
 - **Nordic Semiconductor:** nRF52832
 - **Microchip:** ATmega8 (AVR)
 
