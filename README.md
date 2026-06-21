@@ -1,14 +1,15 @@
 # Hi there! I'm an Embedded Software Engineer
 
-I specialize in low-level, register-level development (**Bare Metal**) and firmware optimization for ARM Cortex-M microcontrollers. I focus on writing highly efficient, non-blocking peripheral drivers and creating custom automation tools to streamline the development workflow.
+I specialize in low-level, register-level development (**Bare Metal**) and firmware optimization for ARM Cortex-M, AVR, and STM8 microcontrollers. I focus on writing highly efficient, non-blocking peripheral drivers, wireless telemetry systems, and creating custom automation tools to streamline the development workflow.
 
 ---
 
 ## Technical Stack
 
 ### Microcontrollers (MCUs)
-- **STMicroelectronics:** STM32F103 (Blue Pill), STM32F030
+- **STMicroelectronics:** STM32F103 (Blue Pill), STM32F030, STM8S003F3
 - **Nordic Semiconductor:** nRF52832
+- **Microchip:** ATmega8 (AVR)
 
 ### Peripherals & Protocols
 - **Wireless/Radio:** Proprietary 2.4GHz (nRF24L01), BLE (nRF52)
@@ -24,7 +25,7 @@ I specialize in low-level, register-level development (**Bare Metal**) and firmw
 
 ## Featured Projects
 
-Here are the key repositories that reflect my engineering approach and code quality:
+Here are the key repositories that reflect my engineering approach and code quality. The three-link sensor→repeater→receiver chain in project #2 below demonstrates cross-architecture interoperability across ARM Cortex-M0, AVR, and STM8 in a single end-to-end wireless telemetry system.
 
 ### 1. [Non-Blocking DS18B20 Register-Level Driver](https://github.com/a5021/non-blocking-ds18B20-driver-for-stm32f103c8t6)
 - **Overview:** An asynchronous, non-blocking driver for the DS18B20 thermometer on STM32F103, built strictly at the register level.
@@ -45,7 +46,7 @@ Here are the key repositories that reflect my engineering approach and code qual
 - **Overview:** A shell script for instantaneous scaffolding of a clean, CMSIS-ready project structure for BluePill boards, bypassing bulky IDE project wizards.
 - **Stack:** Bash / Shell.
 
-### 5. [stm32codegen - Initialization Code Generator](https://github.com/a5021/BluePill_Project_Generator)
+### 5. [stm32codegen - Initialization Code Generator](https://github.com/a5021/stm32codegen)
 - **Overview:** A Python-based CLI tool designed to automatically generate CMSIS-compliant peripheral initialization templates for STM32 MCUs.
 - **Key Feature:** Serving as a lightweight alternative to heavy IDE tools (like STM32CubeMX) for developers who prefer clean, bloat-free bare-metal code.
 - **Stack:** Python, CMSIS, Bare-metal workflow.
@@ -57,4 +58,3 @@ Here are the key repositories that reflect my engineering approach and code qual
 This dynamic card updates automatically and analyzes the codebase across all my public repositories:
 
 [![a5021's GitHub stats](https://github-readme-stats.vercel.app/api?username=a5021&show_icons=true&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
-
