@@ -36,13 +36,6 @@ Here are the key repositories that reflect my engineering approach and code qual
 - **Key Feature:** Demonstrates cross-architecture interoperability (ARM Cortex-M0, AVR, STM8) with a shared radio protocol, bare-metal drivers, and relay-based automation, with end-to-end telemetry delivery to an internet-connected endpoint.
 - **Stack:** C, STM32F030F4P6, ATmega8, STM8S003F3, nRF24L01+.
 
----
-
-## Connect with Me
-
-- **Telegram:** [@a5021](https://t.me)
-- **Explore More:** Feel free to check out the [Repositories](https://github.com) tab for other low-level projects (including multi-sensor setups on STM32F030 + nRF24L01).
-
 ### 3. [nRF52832 + BME280 Wireless Sensor Node](https://github.com/a5021/NRF52832-BME280-RADIO)
 - **Overview:** Firmware for a wireless environmental sensor node measuring pressure, humidity, and temperature.
 - **Key Feature:** Implements direct radio communication on Nordic chips with a strong focus on low-power optimization and standalone efficiency.
@@ -52,10 +45,12 @@ Here are the key repositories that reflect my engineering approach and code qual
 - **Overview:** A shell script for instantaneous scaffolding of a clean, CMSIS-ready project structure for BluePill boards, bypassing bulky IDE project wizards.
 - **Stack:** Bash / Shell.
 
-### 5. [stm32codegen — Initialization Code Generator](https://github.com/a5021/BluePill_Project_Generator)
+### 5. [stm32codegen - Initialization Code Generator](https://github.com/a5021/BluePill_Project_Generator)
 - **Overview:** A Python-based CLI tool designed to automatically generate CMSIS-compliant peripheral initialization templates for STM32 MCUs.
 - **Key Feature:** Serving as a lightweight alternative to heavy IDE tools (like STM32CubeMX) for developers who prefer clean, bloat-free bare-metal code.
 - **Stack:** Python, CMSIS, Bare-metal workflow.
+
+---
 
 ## Profile Analytics
 
@@ -64,3 +59,8 @@ This dynamic card updates automatically and analyzes the codebase across all my 
 [![a5021's GitHub stats](https://github-readme-stats.vercel.app/api?username=a5021&show_icons=true&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
 
 ---
+
+## Connect with Me
+
+- **Telegram:** [@a5021](https://t.me)
+- **Explore More:** Feel free to check out the [Repositories](https://github.com) tab for other low-level projects (including multi-sensor setups on STM32F030 + nRF24L01).
