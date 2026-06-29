@@ -32,7 +32,7 @@ Here are the key repositories that reflect my engineering approach and code qual
 - **Key Feature:** Eliminates blocking hardware delays entirely, resulting in minimal CPU overhead and making it safe for time-critical, multi-tasking systems.
 - **Stack:** C, STM32, Reference Manual, Register-Level Programming.
 
-### 2. [Wireless Sensor → Repeater → Receiver Chain](https://github.com/a5021/STM32F030F4P6-WIRELESS-MULTISENSOR)
+### 2. [Wireless Sensor](https://github.com/a5021/STM32F030F4P6-WIRELESS-MULTISENSOR) → [Repeater](https://github.com/a5021/ATMEGA8-NRF24L01-REPEATER) → [Receiver](https://github.com/a5021/STM8S-NRF24L01-RECEIVER)
 - **Overview:** A complete three-link wireless telemetry system spanning three MCU architectures. An STM32F030F4P6 multisensor node (BMP180, Si7021, BH1750) transmits environmental data over nRF24L01+ to an ATmega8 repeater, which controls a load relay and retransmits the datagram across multiple channels. An STM8S003F3 receiver decodes the relayed data and sends it over UART to an OpenWrt-based router, which forwards the telemetry to the internet via a set of scripts.
 - **Key Feature:** Demonstrates cross-architecture interoperability (ARM Cortex-M0, AVR, STM8) with a shared radio protocol, bare-metal drivers, and relay-based automation, with end-to-end telemetry delivery to an internet-connected endpoint.
 - **Stack:** C, STM32F030F4P6, ATmega8, STM8S003F3, nRF24L01+.
