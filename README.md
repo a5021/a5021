@@ -30,7 +30,7 @@ Here are the key repositories that reflect my engineering approach and code qual
 ### 1. [Non-Blocking DS18B20 Register-Level Driver](https://github.com/a5021/non-blocking-ds18B20-driver-for-stm32f103c8t6)
 - **Overview:** An asynchronous, non-blocking driver for the DS18B20 thermometer on STM32F103, built strictly at the register level.
 - **Key Feature:** Eliminates blocking hardware delays entirely, resulting in minimal CPU overhead and making it safe for time-critical, multi-tasking systems.
-- **Stack:** C, STM32, Reference Manual Registers.
+- **Stack:** C, STM32, Reference Manual, Register-Level Programming.
 
 ### 2. [Wireless Sensor → Repeater → Receiver Chain](https://github.com/a5021/STM32F030F4P6-WIRELESS-MULTISENSOR)
 - **Overview:** A complete three-link wireless telemetry system spanning three MCU architectures. An STM32F030F4P6 multisensor node (BMP180, Si7021, BH1750) transmits environmental data over nRF24L01+ to an ATmega8 repeater, which controls a load relay and retransmits the datagram across multiple channels. An STM8S003F3 receiver decodes the relayed data and sends it over UART to an OpenWrt-based router, which forwards the telemetry to the internet via a set of scripts.
