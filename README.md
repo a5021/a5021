@@ -57,4 +57,4 @@ Here are the key repositories that reflect my engineering approach and code qual
 
 This dynamic card updates automatically and analyzes the codebase across all my public repositories:
 
-[![a5021's GitHub stats](https://github-readme-stats.vercel.app/api?username=a5021&show_icons=true&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
+[![a5021's GitHub stats](https://github-stats-extended.vercel.app/api?username=a5021&show_icons=true&theme=dark)](https://github.com/stats-organization/github-stats-extended)
