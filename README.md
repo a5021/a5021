@@ -28,9 +28,9 @@ I specialize in low-level, register-level development (**Bare Metal**) and firmw
 Here are the key repositories that reflect my engineering approach and code quality:
 
 ### 1. [stm32-async-1wire — Non-Blocking 1-Wire Library](https://github.com/a5021/stm32-async-1wire)
-- **Overview:** A universal, register-level 1-Wire master layer for STM32 with a full-featured DS18B20 temperature driver built on top of it. The MCU-independent core rides a small port interface; header-only backends ship today for STM32F103 and STM32F030.
-- **Key Feature:** Every bus slot is generated and captured by TIM1 + DMA hardware automation — zero interrupts, zero busy-waits. Multi-sensor Search ROM, alarm search, per-device addressing and non-blocking command transactions, verified on real hardware with an 8-device bus.
-- **Stack:** C, CMSIS / Register-Level Programming, TIM + DMA, dual-backend (Cortex-M3 / Cortex-M0).
+- **Overview:** A universal, register-level 1-Wire master layer for STM32 with non-blocking DS18B20 temperature and DS2431 EEPROM drivers built on top. The MCU-independent core rides a small port interface; header-only per-family backends cover STM32F0, F1, F3, F4, G0, G4 and H5.
+- **Key Feature:** Every bus slot is generated and captured by TIM1 + DMA hardware automation — zero interrupts, zero busy-waits. Multi-sensor Search ROM, alarm search, per-device addressing, non-blocking command transactions, and a full DS2431 read/write EEPROM cycle, verified on real hardware.
+- **Stack:** C, CMSIS / Register-Level Programming, TIM + DMA, Cortex-M0/M0+/M3/M4/M33.
 
 ### 2. [Wireless Sensor](https://github.com/a5021/STM32F030F4P6-WIRELESS-MULTISENSOR) → [Repeater](https://github.com/a5021/ATMEGA8-NRF24L01-REPEATER) → [Receiver](https://github.com/a5021/STM8S-NRF24L01-RECEIVER)
 - **Overview:** A complete three-link wireless telemetry system spanning three MCU architectures. An STM32F030F4P6 multisensor node (BMP180, Si7021, BH1750) transmits environmental data over nRF24L01+ to an ATmega8 repeater, which controls a load relay and retransmits the datagram across multiple channels. An STM8S003F3 receiver decodes the relayed data and sends it over UART to an OpenWrt-based router, which forwards the telemetry to the internet via a set of scripts.
