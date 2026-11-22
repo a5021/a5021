@@ -32,24 +32,29 @@ Here are the key repositories that reflect my engineering approach and code qual
 - **Key Feature:** Every bus slot is generated and captured by TIM1 + DMA hardware automation — zero interrupts, zero busy-waits. Multi-sensor Search ROM, alarm search, per-device addressing, non-blocking command transactions, a full DS2431 read/write EEPROM cycle and DS2413 PIO control, verified on real hardware including a 30-minute soak with 0 CRC failures on STM32U585CIU6 at 160 MHz.
 - **Stack:** C, CMSIS / Register-Level Programming, TIM + DMA, Cortex-M0/M0+/M3/M4/M33/M7; TrustZone-aware secure build (`-mcmse`) on STM32U5.
 
-### 2. [Wireless Sensor](https://github.com/a5021/STM32F030F4P6-WIRELESS-MULTISENSOR) → [Repeater](https://github.com/a5021/ATMEGA8-NRF24L01-REPEATER) → [Receiver](https://github.com/a5021/STM8S-NRF24L01-RECEIVER)
-- **Overview:** A complete three-link wireless telemetry system spanning three MCU architectures. An STM32F030F4P6 multisensor node (BMP180, Si7021, BH1750) transmits environmental data over nRF24L01+ to an ATmega8 repeater, which controls a load relay and retransmits the datagram across multiple channels. An STM8S003F3 receiver decodes the relayed data and sends it over UART to an OpenWrt-based router, which forwards the telemetry to the internet via a set of scripts.
-- **Key Feature:** Demonstrates cross-architecture interoperability (ARM Cortex-M0, AVR, STM8) with a shared radio protocol, bare-metal drivers, and relay-based automation, with end-to-end telemetry delivery to an internet-connected endpoint.
-- **Stack:** C, STM32F030F4P6, ATmega8, STM8S003F3, nRF24L01+.
+### 2. [at32f421-1wire — Standalone 1-Wire → I2C Bridge on AT32F421](https://github.com/a5021/at32f421-1wire)
+- **Overview:** Non-blocking, interrupt-free 1-Wire (DS18B20 / DS2431) for the Artery AT32F421F8P7 (Cortex-M4, 64K flash, 16K SRAM, TSSOP20). TMR1 + DMA1 generate and capture every bus slot; the same superloop exposes a sensor snapshot to a host as a polled I2C2 slave at `0x42` through a documented register map.
+- **Key Feature:** Register map with validated writable registers, invalid-slot markers and a queued command byte; a CH341A demo; and an autonomous RP2040 conformance tester — 42 tests, 400 kHz measured with a PIO sampler, stress plus fuzzing, verdict on the LED and over USB CDC. 332 host-side checks across 9 suites.
+- **Stack:** C, CMSIS / register-level, AT32F421F8P7, TMR1 + DMA1, I2C2 slave, RP2040 / PIO, Python.
 
-### 3. [nRF52832 + BME280 Wireless Sensor Node](https://github.com/a5021/NRF52832-BME280-RADIO)
+### 3. [stm32codegen - Initialization Code Generator](https://github.com/a5021/stm32codegen)
+- **Overview:** A Python-based CLI tool designed to automatically generate CMSIS-compliant peripheral initialization templates for STM32 MCUs.
+- **Key Feature:** Serving as a lightweight alternative to heavy IDE tools (like STM32CubeMX) for developers who prefer clean, bloat-free bare-metal code.
+- **Stack:** Python, CMSIS, Bare-metal workflow.
+
+### 4. [nRF52832 + BME280 Wireless Sensor Node](https://github.com/a5021/NRF52832-BME280-RADIO)
 - **Overview:** Firmware for a wireless environmental sensor node measuring pressure, humidity, and temperature.
 - **Key Feature:** Implements direct radio communication on Nordic chips with a strong focus on low-power optimization and standalone efficiency.
 - **Stack:** C, nRF52832, BME280.
 
-### 4. [BluePill Project Generator](https://github.com/a5021/BluePill_Project_Generator)
+### 5. [Wireless Sensor](https://github.com/a5021/STM32F030F4P6-WIRELESS-MULTISENSOR) → [Repeater](https://github.com/a5021/ATMEGA8-NRF24L01-REPEATER) → [Receiver](https://github.com/a5021/STM8S-NRF24L01-RECEIVER)
+- **Overview:** A complete three-link wireless telemetry system spanning three MCU architectures. An STM32F030F4P6 multisensor node (BMP180, Si7021, BH1750) transmits environmental data over nRF24L01+ to an ATmega8 repeater, which controls a load relay and retransmits the datagram across multiple channels. An STM8S003F3 receiver decodes the relayed data and sends it over UART to an OpenWrt-based router, which forwards the telemetry to the internet via a set of scripts.
+- **Key Feature:** Demonstrates cross-architecture interoperability (ARM Cortex-M0, AVR, STM8) with a shared radio protocol, bare-metal drivers, and relay-based automation, with end-to-end telemetry delivery to an internet-connected endpoint.
+- **Stack:** C, STM32F030F4P6, ATmega8, STM8S003F3, nRF24L01+.
+
+### 6. [BluePill Project Generator](https://github.com/a5021/BluePill_Project_Generator)
 - **Overview:** A shell script for instantaneous scaffolding of a clean, CMSIS-ready project structure for BluePill boards, bypassing bulky IDE project wizards.
 - **Stack:** Bash / Shell.
-
-### 5. [stm32codegen - Initialization Code Generator](https://github.com/a5021/stm32codegen)
-- **Overview:** A Python-based CLI tool designed to automatically generate CMSIS-compliant peripheral initialization templates for STM32 MCUs.
-- **Key Feature:** Serving as a lightweight alternative to heavy IDE tools (like STM32CubeMX) for developers who prefer clean, bloat-free bare-metal code.
-- **Stack:** Python, CMSIS, Bare-metal workflow.
 
 ---
 
